@@ -19,7 +19,7 @@ Indian Institute of Technology Madras
 | Shivendra Patel | 21f2001310@ds.study.iitm.ac.in | shivendra1717 | <img src="shivendra.png" height="40"> |
 | Rajat Srivastava | 22f3003195@ds.study.iitm.ac.in | 22f3003195 | <img src="rajat.png" height="40"> |
 | Samta Ranka | 23f1001316@ds.study.iitm.ac.in | 23f1001316 | <img src="samta.png" height="40"> |
-| Ritwik Trivedi  | 22f1000120@ds.study.iitm.ac.in | ritwiktrivedi | <img src="ritwik.png" height="40"> |
+| Ritwik Trivedi  | 22f1000120@ds.study.iitm.ac.in | ritwiktrivedi | Ritwik Trivedi |
 | Bryan David Robinson | 22f3002277@ds.study.iitm.ac.in | brilo1819 | <img src="bryan.png" height="40"> |
 
 Contents
