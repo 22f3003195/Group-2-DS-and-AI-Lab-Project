@@ -8,12 +8,12 @@
 
 **\#\# 1\. Task Distribution Matrix**
 
-| Task Description | Samta Ranka | Shivendra  Patel | Ritwik Trivedi | Rajat Srivastava | Bryan David Robinson |  
-| **:---** | **:---:** | **:---:** | **:---:** | **:---:** | **:---:** |  
-| Drafted the Problem Statement | ✓ | ✓ | ✓ | ✓ | |  
-| Research & Created the Initial Report | ✓ | ✓ |  | ✓ | |  
-| Created the Presentation Slides (PPT) | ✓ |  | | ✓ | |  
-| Converted the Final Report to Markdown | | | ✓ | ✓ |  |  
+| Task Description | Samta Ranka | Shivendra  Patel | Ritwik Trivedi | Rajat Srivastava | Bryan David Robinson |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| Drafted the Problem Statement | ✓ | ✓ | ✓ | ✓ | |
+| Research & Created the Initial Report | ✓ | ✓ |  | ✓ | |
+| Created the Presentation Slides (PPT) | ✓ |  | | ✓ | |
+| Converted the Final Report to Markdown | | | ✓ | ✓ |  |
 | Overall Formatting (Report & PPT) | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 **\---**
