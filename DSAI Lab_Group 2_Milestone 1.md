@@ -16,11 +16,11 @@ Indian Institute of Technology Madras
 
 | Name | Email | GitHub Usernames | Signature |
 | :---: | ----- | :---: | ----- |
-| Shivendra Patel | 21f2001310@ds.study.iitm.ac.in | shivendra1717 | ![][image2] |
-| Rajat Srivastava | 22f3003195@ds.study.iitm.ac.in | 22f3003195 | ![][image3] |
-| Samta Ranka | 23f1001316@ds.study.iitm.ac.in | 23f1001316 | ![][image4] |
-| Ritwik Trivedi  | 22f1000120@ds.study.iitm.ac.in | ritwiktrivedi | ![][image5] |
-| Bryan David Robinson | 22f3002277@ds.study.iitm.ac.in | brilo1819 | ![][image6] |
+| Shivendra Patel | 21f2001310@ds.study.iitm.ac.in | shivendra1717 | <img src="shivendra.png" height="40"> |
+| Rajat Srivastava | 22f3003195@ds.study.iitm.ac.in | 22f3003195 | !<img src="rajat.png" height="40"> |
+| Samta Ranka | 23f1001316@ds.study.iitm.ac.in | 23f1001316 | <img src="samta.png" height="40"> |
+| Ritwik Trivedi  | 22f1000120@ds.study.iitm.ac.in | ritwiktrivedi | <img src="ritwik.png" height="40"> |
+| Bryan David Robinson | 22f3002277@ds.study.iitm.ac.in | brilo1819 | <img src="bryan.png" height="40"> |
 
 Contents
 
