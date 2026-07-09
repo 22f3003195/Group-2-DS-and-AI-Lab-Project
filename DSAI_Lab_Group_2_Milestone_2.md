@@ -15,8 +15,7 @@
 |------|-------|------------------|-----------|
 | Bryan David Robinson | 22f3002277@ds.study.iitm.ac.in | brilo1819 | |
 | Ritwik Trivedi | 22f1000120@ds.study.iitm.ac.in | ritwiktrivedi | |
-| Rajat Shrivastava | 22f3003195@ds.study.iitm.ac.in
- | 22f3003195 | |
+| Rajat Shrivastava | 22f3003195@ds.study.iitm.ac.in | 22f3003195 | |
 | Samta Ranka | 23f1001316@ds.study.iitm.ac.in | 23f1001316 | S.R. |
 | Shivendra Patel | 21f2001310@ds.study.iitm.ac.in | shivendra1717 | S.P.|
 
@@ -107,22 +106,6 @@ Since real patient medical reports cannot be used due to privacy regulations (HI
 
 - Total records: 4,999
 - Lab-related records (filtered): 2,416 (48.3%)
-- Medical specialties: 40 unique
-
-**Top 10 specialties:**
-
-| Specialty | Count |
-|-----------|-------|
-| Surgery | 1,103 |
-| Consult - History and Phy. | 516 |
-| Cardiovascular / Pulmonary | 372 |
-| Orthopedic | 355 |
-| Radiology | 273 |
-| General Medicine | 259 |
-| Gastroenterology | 230 |
-| Neurology | 223 |
-| SOAP / Chart / Progress Notes | 166 |
-| Obstetrics / Gynecology | 160 |
 
 ### 2.2 MIMIC-III Features (relevant to our project)
 
