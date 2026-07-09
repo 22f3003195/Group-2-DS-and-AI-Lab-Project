@@ -14,7 +14,7 @@
 | Name | Email | GitHub Usernames | Signature |
 |------|-------|------------------|-----------|
 | Bryan David Robinson | 22f3002277@ds.study.iitm.ac.in | brilo1819 | |
-| Ritwik Trivedi | 22f1000120@ds.study.iitm.ac.in | ritwiktrivedi | |
+| Ritwik Trivedi | 22f1000120@ds.study.iitm.ac.in | ritwiktrivedi | R.T.W |
 | Rajat Shrivastava | 22f3003195@ds.study.iitm.ac.in | 22f3003195 | |
 | Samta Ranka | 23f1001316@ds.study.iitm.ac.in | 23f1001316 | S.R. |
 | Shivendra Patel | 21f2001310@ds.study.iitm.ac.in | shivendra1717 | S.P.|
