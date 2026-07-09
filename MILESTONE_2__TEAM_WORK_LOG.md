@@ -15,6 +15,6 @@
 | Drafted Milestone 2 Technical Report Content | | | | ✓ | ✓ |
 | Converted Report Draft into Markdown Format | | | | | ✓ |
 | Created the Presentation Slides (PPT) Layout | | | ✓ | ✓ | |
-| Final Formatting Pass & Quality Review (Report & PPT) | | | ✓ | ✓ | ✓ |
+| Final Formatting Pass & Quality Review (Report & PPT) | |✓ | ✓ | ✓ | ✓ |
 
 ---
