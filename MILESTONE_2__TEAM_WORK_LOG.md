@@ -10,11 +10,11 @@
 
 | Task Description | Bryan David Robinson | Ritwik Trivedi | Rajat Srivastava | Samta Ranka | Shivendra Patel |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| Identified Datasets (MTSamples, MIMIC-III, Sample PDFs) |  |  | ✓ | ✓ | ✓ |
+| Identified Datasets (MTSamples, MIMIC-III, Sample PDFs) | ✓ |  | ✓ | ✓ | ✓ |
 | Preprocessing Scripts | | | | | ✓ |
 | Drafted Milestone 2 Technical Report Content | | | | ✓ | ✓ |
 | Converted Report Draft into Markdown Format | | | | | ✓ |
 | Created the Presentation Slides (PPT) Layout | | | ✓ | ✓ | |
-| Final Formatting Pass & Quality Review (Report & PPT) | |✓ | ✓ | ✓ | ✓ |
+| Final Formatting Pass & Quality Review (Report & PPT) | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ---
