@@ -26,7 +26,7 @@ Indian Institute of Technology Madras
 
 The overall system architecture operates through a 4-stage pipeline designed to digitize, extract, structure, and explain medical laboratory reports:
 
-![][image2]
+![](./image16.png) 
 
 **Pipeline Summary & Model Roles**
 
