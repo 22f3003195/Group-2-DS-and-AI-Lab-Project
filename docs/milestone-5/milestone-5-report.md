@@ -145,18 +145,36 @@ Reports were categorized as Successful (DARSS ≥ 70%), Partial Success (60–69
 
 1. **Negative Log-Likelihood (NLL) Loss:**  
    Average cross-entropy loss over target output tokens.  
+   *Measured:* **0.6906** (selected configuration, Trial 5).  
    *Justification:* Serves as the primary objective for causal language modeling.  
 2. **Perplexity (exp(NLL)):**  
    Exponentiated evaluation loss.  
-   *Justification:*Measures the uncertainty of the model; lower values indicate higher confidence in target structure.  
+   *Measured:* **1.99**.  
+   *Justification:* Measures the uncertainty of the model; the near-2.0 value indicates high confidence in the target structure.  
 3. **Eval Mean Token Accuracy:**  
-   Ratio of generated tokens matching reference targets during teacher forcing. *Justification:* Measures alignment with the expected structural format (e.g., bulleted lab descriptions).  
+   Ratio of generated tokens matching reference targets during teacher forcing.  
+   *Measured:* **0.8075** (≈ 80.8%).  
+   *Justification:* Measures alignment with the expected structural format (e.g., bulleted lab descriptions).  
 4. **Evaluation Entropy:**  
    Average uncertainty of predicted token probability distributions.  
-   *Justification:* Lower entropy indicates decisive generation rather than hedged token selection.  
-5. **ROUGE-L & BERTScore:**  
-   Measures sequence overlap and semantic similarity against distilled reference summaries.  
-   *Justification:* Evaluates whether patient recommendations preserve key medical concepts.
+   *Measured:* **0.5387**.  
+   *Justification:* The low value indicates decisive generation rather than hedged token selection.  
+5. **ROUGE-L:**  
+   Longest-common-subsequence overlap against the distilled reference summaries (0–1).  
+   *Measured:* **0.522** (mean).  
+   *Justification:* Recall-oriented and order-aware, so it credits the model for covering the reference's medical content even when phrasing differs — the desired behaviour for paraphrased patient explanations rather than verbatim copies.  
+6. **BLEU:**  
+   N-gram precision against the reference summaries, with a brevity penalty for over-short outputs (0–1).  
+   *Measured:* **0.398** (mean).  
+   *Justification:* A stricter, more literal word-overlap measure than ROUGE-L; the gap between the two (0.398 vs 0.522) indicates the model paraphrases rather than copies the reference.  
+7. **Flesch-Kincaid Grade Level:**  
+   Estimated U.S. school grade required to read the generated text.  
+   *Measured:* **10.52** (mean; target ≤ 8).  
+   *Justification:* Directly gauges patient accessibility. The result exceeds the grade-8 target, flagging that outputs remain somewhat clinical — a reported limitation rather than a passing score.  
+8. **Numeric Fidelity:**  
+   Custom metric: proportion of numeric lab values from the structured input JSON reproduced unchanged in the generated explanation.  
+   *Measured:* **100.0%**.  
+   *Justification:* The most safety-critical metric for this use case — readability and fluency are irrelevant if the model silently alters a patient's value (e.g., creatinine 3.7 rendered as 2.7). Perfect fidelity confirms no numeric hallucination on the evaluation set.
 
 # 5\. Quantitative Training Results & Hyperparameter Strategy
 
@@ -528,9 +546,13 @@ OCR/Preprocessing issues (merged text, rotation, noise/symbols, image quality) a
 
 ### **9.2 Limitations**
 
-Limitation 1 \- Handwritten Reports
+#### Limitation 1 - Handwritten Reports
 
-Limitation 2 \- Hardware Constraints
+The entire perception layer depends on PaddleOCR (PP-OCRv4), a printed-text OCR engine, so the system's validated scope is limited to typed and digital documents. The 20-image real-world evaluation set contained only printed inputs — standard scans, screenshots, PDFs, rotated printed scans, and camera photos of printed reports — and no handwritten content was tested. Handwritten lab values, physician annotations, or margin notes would not be reliably digitised: character-level OCR errors on cursive or irregular writing would compound the merged-token and unit-segmentation failures already observed on printed images (aggregate unit accuracy was only 22.3%). Because the pipeline contains no dedicated handwriting-recognition (HTR) model, supporting handwritten reports would require an additional recognition stage and is out of scope for the current system. 
+
+#### Limitation 2 - Hardware Constraints
+All training and evaluation ran on 2 × NVIDIA Tesla T4 GPUs (16 GB each, Turing architecture with emulated bfloat16), which constrained both model precision and the breadth of experimentation. The limited VRAM forced 4-bit QLoRA quantisation of BioMistral 7B rather than full or 16-bit fine-tuning, capping representational precision. Compute cost also limited the search: the Optuna study was restricted to 8 trials of only 30 steps each, and hyperparameter search was omitted entirely for ClinicalBERT because a single 5-epoch run already required 10.6 hours and a full 8-trial study would have needed roughly 84 hours (~3.5 days). The short step budgets left some configurations underfit (the low-learning-rate trials), and the 16 GB memory ceiling combined with the 1024-token maximum length limits the usable context window — the interactive chat function's history grows unbounded and will eventually reach this limit with no truncation or summarisation in place. 
+
 
 ### **9.3 Unexpected Anomalies**
 
