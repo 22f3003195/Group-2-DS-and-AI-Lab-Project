@@ -180,7 +180,7 @@ Reports were categorized as Successful (DARSS ≥ 70%), Partial Success (60–69
 
 ## 5.1 ClinicalBERT Final 5-Epoch Performance
 
-**![][image4]**
+**![](./images/image19.png) **
 
 **Key Training Takeaway:** The model achieved its lowest validation loss (0.0016) at Epoch 9\. Since load\_best\_model\_at\_end=True was active, the model automatically restored the Epoch 9 weights for final deployment. Metric performance saturated at 99.9723% F1-score.
 
@@ -261,13 +261,13 @@ All trials ran for 30 steps with a fixed batch size of ![][image9], gradient acc
 
 ## 6.1 Data Split Distribution & Source Composition
 
-![][image21]
+![](./images/image1.png) 
 
 ####                **Train / Validation / Test Dataset Split (Pie Chart Representation)**
 
 ####  The dataset was split into **70% training (15,138 reports)**, **15% validation (3,245 reports)**, and **15% testing (3,245 reports)**. This split enables effective model training, hyperparameter tuning, and unbiased evaluation while ensuring good generalization on unseen data. 
 
-![][image22] 
+![](./images/image32.png) 
 
 **Datasource distribution**    
 
@@ -275,11 +275,11 @@ All trials ran for 30 steps with a fixed batch size of ![][image9], gradient acc
 
 ## 6.2 Token and Entity Label Distributions
 
-![][image23]
+![](./images/image7.png) 
 
 ####                                      **BIO Tag Class Distribution in Annotations** Non-entity background tokens (O) dominate the corpus (%). Macro and weighted token F1 metrics are used instead of simple token accuracy to prevent class imbalance from masking extraction errors on rare tokens such as B-UNIT and I-TEST.
 
-![][image24]
+![](./images/image23.png) 
 
 ####                                         **Annotated Clinical Entity Frequencies** The dataset contains **361,707 TEST**, **252,309 VALUE**, and **175,150 UNIT** entities. The higher frequency of test names reflects the structure of clinical laboratory reports, while the substantial number of value and unit annotations ensures effective learning of entity relationships for accurate medical information extraction. 
 
