@@ -12,7 +12,7 @@
 
 | Task Description | Bryan David Robinson | Ritwik Trivedi | Rajat Srivastava | Samta Ranka | Shivendra Patel |
 | --- | :---: | :---: | :---: | :---: | :---: |
-| Team Leadership & Milestone Planning | | | | ✓ | |
+| Team Leadership & Milestone Planning | | | ✓ |  | |
 | Overall Report Compilation & Rubric Review | ✓ | ✓ | ✓ | ✓ | ✓ |
 | MIMIC-III Dataset Preprocessing & Preparation | | | | ✓ | ✓ |
 | Extraction Model Fine-Tuning & Training Documentation | | | | ✓ | ✓ |
