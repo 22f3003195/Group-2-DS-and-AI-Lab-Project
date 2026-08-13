@@ -26,7 +26,7 @@ Indian Institute of Technology Madras
 
 The overall system architecture operates through a 4-stage pipeline designed to digitize, extract, structure, and explain medical laboratory reports:
 
-![][image2]
+![](./images/image16.png) 
 
 **Pipeline Summary & Model Roles**
 
@@ -180,7 +180,7 @@ Reports were categorized as Successful (DARSS ≥ 70%), Partial Success (60–69
 
 ## 5.1 ClinicalBERT Final 5-Epoch Performance
 
-**![][image4]**
+**![](./images/image19.png) **
 
 **Key Training Takeaway:** The model achieved its lowest validation loss (0.0016) at Epoch 9\. Since load\_best\_model\_at\_end=True was active, the model automatically restored the Epoch 9 weights for final deployment. Metric performance saturated at 99.9723% F1-score.
 
@@ -261,13 +261,13 @@ All trials ran for 30 steps with a fixed batch size of ![][image9], gradient acc
 
 ## 6.1 Data Split Distribution & Source Composition
 
-![][image21]
+![](./images/image1.png) 
 
 ####                **Train / Validation / Test Dataset Split (Pie Chart Representation)**
 
 ####  The dataset was split into **70% training (15,138 reports)**, **15% validation (3,245 reports)**, and **15% testing (3,245 reports)**. This split enables effective model training, hyperparameter tuning, and unbiased evaluation while ensuring good generalization on unseen data. 
 
-![][image22] 
+![](./images/image32.png) 
 
 **Datasource distribution**    
 
@@ -275,37 +275,37 @@ All trials ran for 30 steps with a fixed batch size of ![][image9], gradient acc
 
 ## 6.2 Token and Entity Label Distributions
 
-![][image23]
+![](./images/image7.png) 
 
 ####                                      **BIO Tag Class Distribution in Annotations** Non-entity background tokens (O) dominate the corpus (%). Macro and weighted token F1 metrics are used instead of simple token accuracy to prevent class imbalance from masking extraction errors on rare tokens such as B-UNIT and I-TEST.
 
-![][image24]
+![](./images/image23.png) 
 
 ####                                         **Annotated Clinical Entity Frequencies** The dataset contains **361,707 TEST**, **252,309 VALUE**, and **175,150 UNIT** entities. The higher frequency of test names reflects the structure of clinical laboratory reports, while the substantial number of value and unit annotations ensures effective learning of entity relationships for accurate medical information extraction. 
 
 ## 6.3 ClinicalBERT Extraction Performance & Confusion Analysis
 
-![][image25]
+![](./images/image35.png) 
 
 ####                          **Entity Tag Confusion Matrix (NER Error Heatmap Analysis)** The misclassification-only heatmap shows that prediction errors are rare and mainly involve confusion between the **'O'** class and entity labels due to OCR noise or tokenization issues. The most frequent errors are **O → B-VALUE (23)**, **O → I-TEST (21)**, **O → B-TEST (17)**, and **O → B-UNIT (13)**, while **B-TEST → O (9)**, **I-TEST → O (9)**, **B-VALUE → O (5)**, and **B-UNIT → O (5)** occur less frequently. Overall, the model demonstrates highly accurate entity recognition with minimal misclassifications. 
 
-![][image26]
+![](./images/image3.png) 
 
 ####                        **F1-Score Performance vs. Medical Report Token Length** *Extraction accuracy remains stable (99.9%) up to ClinicalBERT's 128-token sequence limit. Performance drops slightly (99.81%) on reports exceeding 128 tokens due to context truncation prior to dynamic batching.*
 
 #### **F1-Score Performance by Clinical Data Source**
 
-#### *![][image27]* ClinicalBERT achieved **near-perfect accuracy and Entity F1 on the MIMIC-III dataset**, demonstrating excellent performance on structured clinical text. Performance decreased on **MTSamples (Accuracy: 99.78%, Entity F1: 92.3%)** due to greater variation in writing style and report formatting, indicating good generalization to diverse clinical documents. 
+#### *![](./images/image13.png) * ClinicalBERT achieved **near-perfect accuracy and Entity F1 on the MIMIC-III dataset**, demonstrating excellent performance on structured clinical text. Performance decreased on **MTSamples (Accuracy: 99.78%, Entity F1: 92.3%)** due to greater variation in writing style and report formatting, indicating good generalization to diverse clinical documents. 
 
 ## 6.4 ClinicalBERT Training & Validation Loss Trend 
 
-![][image28]
+![](./images/image10.png) 
 
 Key Observation: Validation loss reaches minimum at Epoch 9 (0.0016), after which it plateaus. The model restored Epoch 9 weights via load\_best\_model\_at\_end.
 
 ## 6.5 Performance by Image Type (Bar Chart Representation)
 
-![][image29]
+![](./images/image21.png) 
 
 | Image Type | n | Detection % | Value Acc % | Unit Acc % | Full Success % |
 | ----- | :---: | :---: | :---: | :---: | :---: |
@@ -323,7 +323,7 @@ Screenshots score highest on detection and value accuracy — they're born-digit
 
 Each report's "Main\_Errors" note was scanned for category-indicative language (missed/false test names, unit mentions, value mentions, reference-range/status mentions, and OCR/merge/rotation/noise mentions) and tallied. Shares below are of total error mentions, not of report count.
 
-![][image30]
+![](./images/image24.png) 
 
 | Category | % of all error mentions |
 | ----- | :---: |
@@ -335,7 +335,7 @@ Each report's "Main\_Errors" note was scanned for category-indicative language (
 
  
 
-![][image31]
+![](./images/image27.png) 
 
 Test-name detection (missed tests, false positives, duplicated/mistagged entities) dominates across nearly every image type. Electrolytes Panel and Rotated images carry the largest OCR/Preprocessing share (40% and 18.5% respectively) — consistent with rotation and column-merge issues. Human Captured Laboratory Report images show almost no reference-range errors but the highest relative share of test-name errors, since their main failure mode was the NER pipeline stopping short of the full test count.
 
@@ -343,7 +343,7 @@ Test-name detection (missed tests, false positives, duplicated/mistagged entitie
 
 Pooled across all 20 reports: 345 actual test entities, 257 correctly extracted, 88 missed, 5 false positives
 
-![][image32]
+![](./images/image17.png) 
 
 | Metric | Value |
 | ----- | :---: |
@@ -357,19 +357,19 @@ The model rarely invents tests that aren't there (98.1% precision, only 5 false 
 
 ## 6.7 BioMistral 7B: Quantitative Evaluation Plots
 
-![][image33]
+![](./images/image11.png) 
 
 **Training vs. validation loss (checkpoint at epoch 2).** This is a textbook overfitting curve on a small dataset. Training loss falls steadily across all three epochs (about 0.33 → 0.20 → 0.12), but validation loss bottoms out at epoch 2 (\~0.44) and rises again by epoch 3 (\~0.49). The point where the two curves diverge is the point where the model stops learning generalisable patterns and begins memorising the 73 training examples. Selecting the epoch-2 checkpoint is therefore the correct decision, and it follows automatically from the load\_best\_model\_at\_end with metric\_for\_best\_model="eval\_loss" configuration rather than being a manual choice. The widening train-validation gap at epoch 3 is the same small-data signature seen in the Optuna search, and it reinforces the central finding: the binding constraint is dataset size, not training duration or model capacity. Training longer would only deepen the overfitting.
 
-![][image34]
+![](./images/image9.png) 
 
 **Readability, Flesch-Kincaid Grade Level (mean 10.5).** This is the figure that reports a genuine shortfall and should be presented as such. The generated summaries sit at a mean grade level of 10.5, spanning roughly grade 7 to 13.5, whereas the design target for a general patient audience was grade 8 or below. Only the small left tail of outputs meets that target; the bulk of the distribution reads at a tenth-to-eleventh-grade level, which is too high for broad accessibility. This is a real limitation inherited in part from the teacher model, whose explanations use clinical phrasing, and it points to a concrete fix: constrain or post-process toward simpler vocabulary and shorter sentences, or add readability to the training objective. It is worth stating plainly rather than smoothing over, because readability was an explicit goal of the task.
 
-![][image35]
+![](./images/image34.png) 
 
 **ROUGE-L distribution (mean 0.52).** ROUGE-L, based on the longest common subsequence with the reference, runs higher than BLEU at a mean of about 0.52, spanning roughly 0.30 to 0.78. The gap between the two is expected and informative: ROUGE-L is recall-oriented and tolerant of insertions, so it credits the model for covering the reference's content even when word order or connective phrasing differs. The higher ROUGE-L relative to BLEU therefore suggests the model reliably captures what each lab result means while varying how it says it — the desired behaviour for patient-facing text, which should paraphrase rather than copy. The upper tail past 0.70 represents near-verbatim structural matches, likely the simpler single-test reports.
 
-![][image36]
+![](./images/image5.png) 
 
 **BLEU score distribution (mean 0.40).** The BLEU scores cluster around a mean of 0.40 with a roughly symmetric spread from about 0.20 to 0.65. BLEU measures n-gram precision against the reference summaries, so it is a strict, surface-level overlap metric; a mean of 0.40 is respectable for open-ended generation, where many phrasings are valid and the model is not rewarded for wording that differs from the reference but carries the same meaning. The spread matters more than the mean here: the left tail near 0.20 corresponds to summaries the model phrased very differently from the teacher target, not necessarily to wrong summaries. BLEU is therefore best read alongside ROUGE-L and the readability measure rather than as a standalone quality verdict, since a patient-facing summary that paraphrases correctly is penalised by BLEU even when it is clinically accurate.
 
@@ -482,7 +482,7 @@ Chloride: 105 mmol/L
 | Missing multi-word tests | 20.9 |
 | Value extraction errors | 10.5 |
 
-![][image37]
+![](./images/image30.png) 
 
 **Category 3: Generative Synthesis Errors**
 
@@ -515,7 +515,7 @@ OCR/Preprocessing issues (merged text, rotation, noise/symbols, image quality) a
 
 **Image Quality Impact:**
 
-![][image38]
+![](./images/image25.png) 
 
 | Quality Level | n | Detection % | Value Accuracy % |
 | ----- | :---: | :---: | :---: |
