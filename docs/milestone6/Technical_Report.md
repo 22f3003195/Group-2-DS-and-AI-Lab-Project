@@ -363,7 +363,7 @@ The engineering team executed an iterative resolution process to achieve full re
 
 ## 6.3 Data Split Distribution & Source Composition
 
-![Alt text](./docs/milestone-5/images/image1.png)
+![Alt text](./images/image1.png)
 
 
 ####                **Train / Validation / Test Dataset Split (Pie Chart Representation)**
