@@ -55,7 +55,7 @@ The system accepts medical lab report images or PDFs, extracts test names, numer
 
 The system is structured as a two-stage decoupled pipeline:
 
-![][image2]
+![Alt text](./images/Upload%20Ui.png)
 
 ## 2.1 Decoupled Dual-Stream Design Rationale
 
@@ -87,7 +87,7 @@ During early development (M1–M2), full MIMIC-III access was pending credential
 
 Upon receiving full PhysioNet MIMIC-III credentialed access, the dataset scaled to **1.6 million+ (1,647,877) clinical reports**.
 
-![][image3]**Dataset Size Trade-Off Analysis**
+![Alt text](./images/Dataset%20Configuration.png)
 
 To evaluate computational efficiency vs. performance generalization, multiple ablation runs were executed:
 
@@ -244,7 +244,7 @@ When transitioning from textual training splits to real-world lab report images 
 
 The engineering team executed an iterative resolution process to achieve full real-world robustness:
 
-![][image4]**Breakdown of Engineering Iterations**
+![Alt text](./images/Initial%20Failure%20Diagnosis.png)
 
 **Iteration 1: Clinical Narrative Translation**
 
@@ -326,7 +326,7 @@ The engineering team executed an iterative resolution process to achieve full re
 
 ## 5.2 Pipeline Flow Summary
 
-![][image5]
+![Alt text](./images/images/Pipleine%20Flow.png)
 
 # 6\. Experimental Results & Performance Evolution
 
@@ -363,7 +363,8 @@ The engineering team executed an iterative resolution process to achieve full re
 
 ## 6.3 Data Split Distribution & Source Composition
 
-![][image7]
+![Alt text](.docs/milestone-5/images/image1.png)
+
 
 ####                **Train / Validation / Test Dataset Split (Pie Chart Representation)**
 
