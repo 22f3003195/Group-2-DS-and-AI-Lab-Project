@@ -7,8 +7,8 @@
 Milestone \- 6 Report: Deployment & Documentation
 
  
+![Alt text](./images/image2.gif)
 
-![][image1]  
 
 Indian Institute of Technology Madras 
 
