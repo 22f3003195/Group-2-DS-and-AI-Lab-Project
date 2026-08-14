@@ -3,6 +3,8 @@
 
 ### Milestone - 6 Report: User Guide
 
+![Alt text](./images/image2.gif)
+
 **Indian Institute of Technology Madras**  
 **GROUP: 2**
 
