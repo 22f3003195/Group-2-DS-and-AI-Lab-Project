@@ -378,38 +378,38 @@ The engineering team executed an iterative resolution process to achieve full re
 
 ## 6.4 Token and Entity Label Distributions
 
-![Alt text](./images/04_entity_distribution.png)
+![Alt text](./images/03_bio_label_distribution.png)
 
 
 ####                                      **BIO Tag Class Distribution in Annotations** Non-entity background tokens (O) dominate the corpus (%). Macro and weighted token F1 metrics are used instead of simple token accuracy to prevent class imbalance from masking extraction errors on rare tokens such as B-UNIT and I-TEST.
 
-![][image10]
+![Alt text](./images/04_entity_distribution.png)
 
 ####                                         **Annotated Clinical Entity Frequencies** The dataset contains **361,707 TEST**, **252,309 VALUE**, and **175,150 UNIT** entities. The higher frequency of test names reflects the structure of clinical laboratory reports, while the substantial number of value and unit annotations ensures effective learning of entity relationships for accurate medical information extraction. 
 
 ## 6.5 ClinicalBERT Extraction Performance & Confusion Analysis
 
-![][image11]
+![Alt text](./images/12_misclassification_only_heatmap.png)
 
 ####                          **Entity Tag Confusion Matrix (NER Error Heatmap Analysis)** The misclassification-only heatmap shows that prediction errors are rare and mainly involve confusion between the **'O'** class and entity labels due to OCR noise or tokenization issues. The most frequent errors are **O → B-VALUE (23)**, **O → I-TEST (21)**, **O → B-TEST (17)**, and **O → B-UNIT (13)**, while **B-TEST → O (9)**, **I-TEST → O (9)**, **B-VALUE → O (5)**, and **B-UNIT → O (5)** occur less frequently. Overall, the model demonstrates highly accurate entity recognition with minimal misclassifications. 
 
-![][image12]
+![Alt text](./images/16_performance_by_sequence_length.png)
 
 ####                        **F1-Score Performance vs. Medical Report Token Length** *Extraction accuracy remains stable (99.9%) up to ClinicalBERT's 128-token sequence limit. Performance drops slightly (99.81%) on reports exceeding 128 tokens due to context truncation prior to dynamic batching.*
 
 #### **F1-Score Performance by Clinical Data Source**
 
-#### *![][image13]* ClinicalBERT achieved **near-perfect accuracy and Entity F1 on the MIMIC-III dataset**, demonstrating excellent performance on structured clinical text. Performance decreased on **MTSamples (Accuracy: 99.78%, Entity F1: 92.3%)** due to greater variation in writing style and report formatting, indicating good generalization to diverse clinical documents. 
+#### *![Alt text](./images/15_performance_by_dataset_source.png)* ClinicalBERT achieved **near-perfect accuracy and Entity F1 on the MIMIC-III dataset**, demonstrating excellent performance on structured clinical text. Performance decreased on **MTSamples (Accuracy: 99.78%, Entity F1: 92.3%)** due to greater variation in writing style and report formatting, indicating good generalization to diverse clinical documents. 
 
 ## 6.6 ClinicalBERT Training & Validation Loss Trend 
 
-![][image14]
+![Alt text](./images/image10.png)
 
 Key Observation: Validation loss reaches minimum at Epoch 9 (0.0016), after which it plateaus. The model restored Epoch 9 weights via load\_best\_model\_at\_end.
 
 ## 6.7 Performance by Image Type (Bar Chart Representation)
 
-![][image15]
+![Alt text](./images/image21.png)
 
 | Image Type | n | Detection % | Value Acc % | Unit Acc % | Full Success % |
 | ----- | :---: | :---: | :---: | :---: | :---: |
@@ -427,8 +427,6 @@ Screenshots score highest on detection and value accuracy — they're born-digit
 
 Each report's "Main\_Errors" note was scanned for category-indicative language (missed/false test names, unit mentions, value mentions, reference-range/status mentions, and OCR/merge/rotation/noise mentions) and tallied. Shares below are of total error mentions, not of report count.
 
-![][image16]
-
 # 
 
 | Category | % of all error mentions |
@@ -440,15 +438,13 @@ Each report's "Main\_Errors" note was scanned for category-indicative language (
 
  
 
-![][image17]
+![Alt text](./images/image27.png)
 
 Test-name detection (missed tests, false positives, duplicated/mistagged entities) dominates across nearly every image type. Electrolytes Panel and Rotated images carry the largest OCR/Preprocessing share (40% and 18.5% respectively) — consistent with rotation and column-merge issues. Human Captured Laboratory Report images show almost no reference-range errors but the highest relative share of test-name errors, since their main failure mode was the NER pipeline stopping short of the full test count.
 
 ## 6.9 Entity Extraction Performance Breakdown (Confusion Analysis)
 
 Pooled across all 20 reports: 345 actual test entities, 257 correctly extracted, 88 missed, 5 false positives
-
-![][image18]
 
 | Metric | Value |
 | ----- | :---: |
