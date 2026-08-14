@@ -340,7 +340,7 @@ The engineering team executed an iterative resolution process to achieve full re
 | **M5 Fine-tuned** | Fine-tuned ClinicalBERT | 99.97% | 99.97% | 99.97% | 99.91% | N/A |
 | **M6 Final** | Full OCR Pipeline \+ QLoRA BioMistral | 98.21% | 83.84% | 90.46% | 90.46% | **Grade 10.5** |
 
-**![][image6]**
+![Alt text](./images/images/image19.png)
 
 ## 6.2 Real-World Image Evaluation Results
 
@@ -458,19 +458,19 @@ The model rarely invents tests that aren't there (98.1% precision, only 5 false 
 
 ## 6.10 BioMistral 7B: Quantitative Evaluation Plots
 
-![][image19]
+![Alt text](./images/image11.png)
 
 **Training vs. validation loss (checkpoint at epoch 2).** This is a textbook overfitting curve on a small dataset. Training loss falls steadily across all three epochs (about 0.33 → 0.20 → 0.12), but validation loss bottoms out at epoch 2 (\~0.44) and rises again by epoch 3 (\~0.49). The point where the two curves diverge is the point where the model stops learning generalisable patterns and begins memorising the 73 training examples. Selecting the epoch-2 checkpoint is therefore the correct decision, and it follows automatically from the load\_best\_model\_at\_end with metric\_for\_best\_model="eval\_loss" configuration rather than being a manual choice. The widening train-validation gap at epoch 3 is the same small-data signature seen in the Optuna search, and it reinforces the central finding: the binding constraint is dataset size, not training duration or model capacity. Training longer would only deepen the overfitting.
 
-![][image20]
+![Alt text](./images/image9.png)
 
 **Readability, Flesch-Kincaid Grade Level (mean 10.5).** This is the figure that reports a genuine shortfall and should be presented as such. The generated summaries sit at a mean grade level of 10.5, spanning roughly grade 7 to 13.5, whereas the design target for a general patient audience was grade 8 or below. Only the small left tail of outputs meets that target; the bulk of the distribution reads at a tenth-to-eleventh-grade level, which is too high for broad accessibility. This is a real limitation inherited in part from the teacher model, whose explanations use clinical phrasing, and it points to a concrete fix: constrain or post-process toward simpler vocabulary and shorter sentences, or add readability to the training objective. It is worth stating plainly rather than smoothing over, because readability was an explicit goal of the task.
 
-![][image21]
+![Alt text](./images/image34.png)
 
 **ROUGE-L distribution (mean 0.52).** ROUGE-L, based on the longest common subsequence with the reference, runs higher than BLEU at a mean of about 0.52, spanning roughly 0.30 to 0.78. The gap between the two is expected and informative: ROUGE-L is recall-oriented and tolerant of insertions, so it credits the model for covering the reference's content even when word order or connective phrasing differs. The higher ROUGE-L relative to BLEU therefore suggests the model reliably captures what each lab result means while varying how it says it — the desired behaviour for patient-facing text, which should paraphrase rather than copy. The upper tail past 0.70 represents near-verbatim structural matches, likely the simpler single-test reports.
 
-![][image22]
+![Alt text](./images/image9.png)
 
 **BLEU score distribution (mean 0.40).** The BLEU scores cluster around a mean of 0.40 with a roughly symmetric spread from about 0.20 to 0.65. BLEU measures n-gram precision against the reference summaries, so it is a strict, surface-level overlap metric; a mean of 0.40 is respectable for open-ended generation, where many phrasings are valid and the model is not rewarded for wording that differs from the reference but carries the same meaning. The spread matters more than the mean here: the left tail near 0.20 corresponds to summaries the model phrased very differently from the teacher target, not necessarily to wrong summaries. BLEU is therefore best read alongside ROUGE-L and the readability measure rather than as a standalone quality verdict, since a patient-facing summary that paraphrases correctly is penalised by BLEU even when it is clinically accurate.
 
@@ -505,7 +505,7 @@ To meet stringent data privacy requirements (HIPAA/GDPR compliance):
 
 ## 7.2 Local Deployment Architecture
 
-![][image23]
+![Alt text](./images/Local%20Deployment%20Architecture.png)
 
 ## 7.3 Model Loading Strategy
 
