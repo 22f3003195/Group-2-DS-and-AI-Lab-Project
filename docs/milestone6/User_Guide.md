@@ -48,25 +48,16 @@ The **Intelligent Medical Report Analysis System** is an accessible, privacy-foc
 
 > **Tip:** Don't worry if your image is rotated or tilted. The system automatically corrects image orientation before reading the text.
 
-![Step 1: Document Upload Screen](assets/images/step1_upload_screen.png)
-*Figure 1: Application Upload Interface featuring Drag-and-Drop file dropzone.*
-
+![Alt text](./images/Screenshot%202026-08-14%20120255.png)
 ---
 
 ### Step 2: Review Your Interactive Health Scorecard
 Once the report is processed, the system will extract test names, numerical values, and units, presenting them in a simplified summary table.
 * **Normal Results:** Displayed with standard formatting.
-* **Flagged Results (High / Low):** So you can immediately see which values fall outside standard reference ranges.
+* **Flagged Results (High / Low):** Color coded and highlighted so you can immediately see which values fall outside standard reference ranges.
 
-| Test Name | Result | Status |
-| :--- | :--- | :--- |
-| **Glucose (Fasting)** | 105 mg/dL | **High** |
-| **Hemoglobin** | 14.2 g/dL | **Normal** |
-| **Serum Creatinine** | 1.5 mg/dL | **High** |
 
-![Step 2: Interactive Health Scorecard](assets/images/step2_health_scorecard.png)
-*Figure 2: Interactive Health Scorecard displaying extracted lab metrics and high/normal status badges.*
-
+![Alt text](./images/WhatsApp%20Image%202026-08-14%20at%202.16.08%20AM.jpeg)
 ---
 
 ### Step 3: Read Plain-English Explanations
