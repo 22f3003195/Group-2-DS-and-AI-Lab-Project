@@ -72,9 +72,6 @@ Below the scorecard, click on any test to expand its detailed explanation. The s
 > * **Why it might be high:** A slightly elevated fasting glucose may indicate prediabetes, recent meal consumption, stress, or certain medications. Your reference range (70-99 mg/dL) is the typical target for healthy individuals.
 > * **What to ask your doctor:** *"Should I repeat this test? Are there lifestyle changes I should consider? Do you recommend a hemoglobin A1c test to check my average blood sugar over time?"*
 
-![Step 3: Plain English Explanations View](assets/images/step3_plain_english_explanation.png)
-*Figure 3: Expanded View showing detailed medical context and suggested doctor discussion questions.*
-
 ---
 
 ### Step 4: Ask Follow-Up Questions (Interactive Chat)
@@ -86,9 +83,6 @@ Have specific questions about a term or result? Use the built-in chat window at 
 * *"Does being dehydrated affect these results?"*
 * *"How does my cholesterol compare to healthy ranges for my age?"*
 * *"What lifestyle changes can help improve my LDL cholesterol?"*
-
-![Step 4: Interactive Chat Interface](assets/images/step4_interactive_chat.png)
-*Figure 4: Interactive AI Assistant Chat Interface for answering user follow-up questions.*
 
 ---
 
