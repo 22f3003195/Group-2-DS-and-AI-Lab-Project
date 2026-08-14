@@ -28,8 +28,6 @@ Medical laboratory reports are designed primarily for healthcare professionals, 
 
 To bridge this communication gap, we developed an **Intelligent Medical Report Analysis System**. This system automatically processes uploaded lab report documents (PDFs or images), extracts numerical values and test names without alteration, flags abnormal health metrics, and provides clear, plain-English explanations written at an accessible reading level. It achieves this while strictly prioritizing patient privacy by enabling local, on-device execution so sensitive health records never need to be uploaded to public cloud servers.
 
-![Executive Overview & System Architecture](assets/images/non_tech_system_overview.png)
-*Figure 1: High-level overview of the Intelligent Medical Report Analysis System processing workflow.*
 
 ---
 
@@ -47,9 +45,7 @@ When patients receive their lab results, they face three primary challenges:
 
 Our system provides a reliable, patient-friendly assistant that transforms raw medical lab documents into a structured summary and clear explanations.
 
-![Document Conversion Workflow](assets/images/document_conversion_flow.png)
-*Figure 2: Transforming complex tabular medical reports into simplified, structured patient summaries.*
-
+![Alt text](./images/Screenshot%202026-08-10%20172418.png)
 ### How It Works (Step-by-Step)
 
 1. **Document Reading:** The user uploads a lab report (as an image file, scanned photo, or digital PDF).
@@ -82,9 +78,6 @@ Our system provides a reliable, patient-friendly assistant that transforms raw m
 ---
 
 ## System Performance at a Glance
-
-![System Performance Metrics](assets/images/performance_metrics.png)
-*Figure 3: System benchmark scores demonstrating high extraction accuracy and image robustness.*
 
 * **Medical Entity Extraction Accuracy:** Exceeded **99.9% F1-score** across clinical datasets, correctly capturing test names, values, and units.
 * **Image Robustness:** Successfully parsed **100% of rotated documents** and maintained a high overall success rate across standard scans, mobile screenshots, and low-quality photos.
