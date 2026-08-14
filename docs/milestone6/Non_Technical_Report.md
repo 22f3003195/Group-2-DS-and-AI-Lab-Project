@@ -3,6 +3,8 @@
 
 ### Milestone - 6 Report: Non-Technical Report
 
+![Alt text](./images/image2.gif)
+
 **Indian Institute of Technology Madras**  
 **GROUP: 2**
 
