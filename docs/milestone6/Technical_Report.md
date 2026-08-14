@@ -427,6 +427,8 @@ Screenshots score highest on detection and value accuracy — they're born-digit
 
 Each report's "Main\_Errors" note was scanned for category-indicative language (missed/false test names, unit mentions, value mentions, reference-range/status mentions, and OCR/merge/rotation/noise mentions) and tallied. Shares below are of total error mentions, not of report count.
 
+![Alt text](./images/Screenshot%202026-08-14%20143652.png)
+
 # 
 
 | Category | % of all error mentions |
@@ -445,6 +447,9 @@ Test-name detection (missed tests, false positives, duplicated/mistagged entitie
 ## 6.9 Entity Extraction Performance Breakdown (Confusion Analysis)
 
 Pooled across all 20 reports: 345 actual test entities, 257 correctly extracted, 88 missed, 5 false positives
+
+![Alt text](./images/Screenshot%202026-08-14%20143616.png)
+
 
 | Metric | Value |
 | ----- | :---: |
