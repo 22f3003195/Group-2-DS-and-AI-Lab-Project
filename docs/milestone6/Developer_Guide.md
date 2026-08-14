@@ -35,8 +35,7 @@ The system solves two primary challenges in clinical document processing:
 
 ## 1.1 Architecture Diagram
 
-![][image2]
-
+![Alt text](./images/Architecture.png)
 # 2\. System Requirements & Hardware Specifications
 
 ## 2.1 Hardware Requirements
