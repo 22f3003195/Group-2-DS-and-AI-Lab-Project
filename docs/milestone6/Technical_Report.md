@@ -8,7 +8,7 @@ Milestone \- 6 Report: Deployment & Documentation
 
  
 
-![][image1]  
+![Alt text](./images/image2.gif)
 
 Indian Institute of Technology Madras 
 
@@ -370,7 +370,7 @@ The engineering team executed an iterative resolution process to achieve full re
 
 ####  The dataset was split into **70% training (15,138 reports)**, **15% validation (3,245 reports)**, and **15% testing (3,245 reports)**. This split enables effective model training, hyperparameter tuning, and unbiased evaluation while ensuring good generalization on unseen data. 
 
-![][image8] 
+![Alt text](./images/01_dataset_source_distribution.png)
 
 **Datasource distribution**    
 
@@ -378,7 +378,8 @@ The engineering team executed an iterative resolution process to achieve full re
 
 ## 6.4 Token and Entity Label Distributions
 
-![][image9]
+![Alt text](./images/04_entity_distribution.png)
+
 
 ####                                      **BIO Tag Class Distribution in Annotations** Non-entity background tokens (O) dominate the corpus (%). Macro and weighted token F1 metrics are used instead of simple token accuracy to prevent class imbalance from masking extraction errors on rare tokens such as B-UNIT and I-TEST.
 
