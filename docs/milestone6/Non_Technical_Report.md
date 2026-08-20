@@ -28,7 +28,9 @@
 
 Medical laboratory reports are designed primarily for healthcare professionals, filled with complex medical jargon (e.g., creatinine, triglycerides), dense reference ranges, and tabular layouts. For ordinary patients, reading these reports can trigger anxiety or lead to misinterpretations. Furthermore, relying on generic conversational AI tools can be risky because they may alter or fabricate ("hallucinate") critical numerical health figures.
 
-To bridge this communication gap, we developed an **Intelligent Medical Report Analysis System**. This system automatically processes uploaded lab report documents (PDFs or images), extracts numerical values and test names without alteration, flags abnormal health metrics, and provides clear, plain-English explanations written at an accessible reading level. It achieves this while strictly prioritizing patient privacy by enabling local, on-device execution so sensitive health records never need to be uploaded to public cloud servers.
+To bridge this communication gap, we developed an **Intelligent Medical Report Analysis System**. This system automatically processes uploaded lab report documents (PDFs or images), extracts numerical values and test names without alteration, flags abnormal health metrics, and provides clear, plain-English explanations written at an accessible reading level.
+
+
 
 
 ---
@@ -39,7 +41,7 @@ When patients receive their lab results, they face three primary challenges:
 
 1. **Language & Comprehension Barrier:** Terms like *alkaline phosphatase* or *hemoglobin A1c* are not everyday language. Patients often search online for answers, leading to unnecessary worry over minor, non-critical deviations.
 2. **Numerical Risk in AI:** Standard public AI chatbots can misread tables or alter specific numbers when generating long text summaries. In medical contexts, misreading a value like 1.4 as 14 can significantly alter the meaning of a test result.
-3. **Privacy Concerns:** Uploading private medical documents to third-party online AI services raises serious data privacy and regulatory concerns.
+3. **Privacy Concerns:** Uploading private medical documents to third-party online AI services raises serious data privacy and regulatory concerns. Our system addresses this by processing data ephemerally—documents are not stored after analysis.
 
 ---
 
@@ -64,10 +66,11 @@ Our system provides a reliable, patient-friendly assistant that transforms raw m
 | Key Feature | Generic Public AI | Our Medical Assistant |
 | :--- | :--- | :--- |
 | **Numerical Accuracy** | Risk of hallucinating or changing lab numbers | **100% Numerical Fidelity** via strict separation of code and AI generation |
-| **Patient Privacy** | Requires uploading documents to cloud servers | **Local Execution**, keeping sensitive data on your device |
+| **Patient Privacy** | Requires uploading documents to cloud servers | **No persistent data storage**, results not saved or used for training |
 | **Document Support** | Prefers copied/pasted text; struggles with bad scans | **Handles Rotated Scans, Images, & PDFs** automatically |
 | **Output Structure** | Dense, broad text paragraphs | **Visual Scorecard + Plain-Language Explanations** |
 | **Safety Guardrails** | May offer unverified advice or diagnoses | **Deferral to Physicians**; never offers diagnoses or prescriptions |
+| **Infrastructure** | Cloud-based with data storage | **Cloud-based with ephemeral processing**; no data retention |
 
 ---
 
@@ -84,6 +87,7 @@ Our system provides a reliable, patient-friendly assistant that transforms raw m
 * **Medical Entity Extraction Accuracy:** Exceeded **99.9% F1-score** across clinical datasets, correctly capturing test names, values, and units.
 * **Image Robustness:** Successfully parsed **100% of rotated documents** and maintained a high overall success rate across standard scans, mobile screenshots, and low-quality photos.
 * **Safety & Precision:** Achieved **100% numerical fidelity**, reproducing every extracted number, unit, and health status without fabricating data.
+* **Supported Document Types:** PDF, JPG, JPEG, PNG
 
 ---
 
