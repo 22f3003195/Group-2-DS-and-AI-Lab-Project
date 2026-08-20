@@ -115,7 +115,16 @@ Have specific questions about a term or result? Use the built-in chat window at 
 **A:** After upload, review the scorecard to verify that the extracted test names, values, and units match your original document. If something appears incorrect, you can re-upload a clearer image or PDF.
 
 **Q: Is my data saved on the server?**  
-**A:** No. All processing happens locally on your device. Your lab reports and medical information are never uploaded to or stored on external servers.
+**A:** No. The system processes your document using a cloud-based backend, but your lab report is not permanently stored. All processing happens in ephemeral memory—your document is analyzed, results are displayed, and then the data is cleared. No patient data is retained, logged, or used for training purposes.
+
+**Q: Where does the processing actually happen?**  
+**A:** The processing happens on cloud servers (Hugging Face ZeroGPU infrastructure). Your document is securely uploaded to the backend, processed through OCR and AI models, and results are returned to your browser. This is necessary because the AI models require GPU acceleration that cannot run in a browser.
+
+**Q: Who can access my uploaded report??**  
+**A:** Only you. Your report is processed in a temporary session and is not accessible to anyone else. The system does not store or share your medical information.
+
+**Q: Who can access my uploaded report??**  
+**A:** Only you. Your report is processed in a temporary session and is not accessible to anyone else. The system does not store or share your medical information.
 
 **Q: What if my report has multiple pages?**  
 **A:** If your report is a multi-page PDF, the system will process all pages sequentially. For image files, upload each page separately.
