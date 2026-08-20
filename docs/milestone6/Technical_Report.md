@@ -41,7 +41,7 @@ Key measurable target objectives include:
 | :---- | :---- | :---- |
 | **Extraction Accuracy** | Entity F1-score ≥ 0.85 | 0.9997 (Exceeded) |
 | **Deterministic Abnormality Flagging** | Compare values against predefined clinical reference ranges without generative hallucination | Achieved |
-| **Patient-Friendly Readability** | Flesch-Kincaid Grade Level ≤ 8.0 | 10.5 (Exceeded) |
+| **Patient-Friendly Readability** | Flesch-Kincaid Grade Level ≤ 8.0 | 8.4 |
 | **Dual-Output Architecture** | Visual metric dashboard alongside plain-language narrative insights | Achieved |
 | **Local Privacy Execution** | End-to-end inference on standard edge hardware without transmitting patient data | Achieved |
 
@@ -55,7 +55,7 @@ The system accepts medical lab report images or PDFs, extracts test names, numer
 
 The system is structured as a two-stage decoupled pipeline:
 
-![Alt text](./images/Upload%20Ui.png)
+![Alt text](./images/end%20to%20end%20system%20architecture%20and%20pipeline.png))
 
 ## 2.1 Decoupled Dual-Stream Design Rationale
 
@@ -73,8 +73,7 @@ Why Hardcoded Reference Ranges?
 
 1. They are deterministic and reliable  
 2. No OCR errors on reference ranges  
-3. Covers 45+ most common lab tests (sufficient for 95% of use cases)  
-4. Ranges are consistent across most clinical labs
+3. Ranges are consistent across most clinical labs
 
 # 3\. Dataset Evolution, Preprocessing & Annotation Strategy
 
