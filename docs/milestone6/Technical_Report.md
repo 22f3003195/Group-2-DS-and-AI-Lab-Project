@@ -53,9 +53,8 @@ The system accepts medical lab report images or PDFs, extracts test names, numer
 
 # 2\. End-to-End System Architecture & Pipeline
 
-The system is structured as a two-stage decoupled pipeline:
 
-![Alt text](./images/end%20to%20end%20system%20architecture%20and%20pipeline.png))
+![Alt text](./images/end%20to%20end%20system%20architecture%20and%20pipeline.png)
 
 ## 2.1 Decoupled Dual-Stream Design Rationale
 
