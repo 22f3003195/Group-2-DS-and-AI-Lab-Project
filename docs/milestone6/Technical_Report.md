@@ -325,7 +325,7 @@ The engineering team executed an iterative resolution process to achieve full re
 
 ## 5.2 Pipeline Flow Summary
 
-![Alt text](./images/images/Pipleine%20Flow.png)
+![Alt text](./images/Pipleine%20Flow.png)
 
 # 6\. Experimental Results & Performance Evolution
 
@@ -337,9 +337,9 @@ The engineering team executed an iterative resolution process to achieve full re
 | **M2  Pretrained** | Pretrained ClinicalBERT | 99.61% | 24.72% | 39.59% | 08.20% | N/A |
 | **M4 Real Test** | Raw OCR \+ Standard NER | 00.00% | 00.00% | 00.00% | 00.00% | N/A |
 | **M5 Fine-tuned** | Fine-tuned ClinicalBERT | 99.97% | 99.97% | 99.97% | 99.91% | N/A |
-| **M6 Final** | Full OCR Pipeline \+ QLoRA BioMistral | 98.21% | 83.84% | 90.46% | 90.46% | **Grade 10.5** |
+| **M6 Final** | Full OCR Pipeline \+ QLoRA BioMistral | 98.21% | 83.84% | 90.46% | 90.46% | **Grade 8.4** |
 
-![Alt text](./images/images/image19.png)
+![Alt text](./images/image19.png)
 
 ## 6.2 Real-World Image Evaluation Results
 
