@@ -4,7 +4,7 @@
 
  
 
-Milestone \- 6 Report: Deployment & Documentation
+Milestone \- 6 Report: Technical Report
 
  
 
@@ -508,7 +508,7 @@ To protect patient data and meet stringent privacy requirements, our system impl
 
 ## 7.2 System Deployment Architecture
 
-![Alt text](./images/Local%20Deployment%20Architecture.png)
+![Alt text](./images/Cloud%20deployment%20architecture.png)
 
 Important Clarification: The system is cloud-hosted and requires an active internet connection. The backend uses Hugging Face's ZeroGPU infrastructure to run the 7B parameter BioMistral-7B model, which cannot run on consumer-grade devices. All processing occurs in the cloud with ephemeral memory, ensuring patient data is not persistently stored.
 
@@ -567,7 +567,7 @@ def load_models():
 | :---- | :---- |
 | **Entity Extraction** | 99.91% F1-score on real-world lab reports |
 | **Real-World Robustness** | 93.5% test detection across diverse images |
-| **Patient-Friendly Output** | FKGL (8th grade or below) |
+| **Patient-Friendly Output** | FKGL 8.4 |
 | **Privacy-Preserving** | Ephemeral processing, no data storage |
 | **Rotation Correction** | 100%+ success on 90° rotated images |
 | **Deployment** | Cloud-based with Hugging Face ZeroGPU infrastructure |
