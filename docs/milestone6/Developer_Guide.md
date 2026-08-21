@@ -35,10 +35,13 @@ The system solves two primary challenges in clinical document processing:
 
 ## 1.1 Architecture Diagram
 
-![Alt text](./images/Architecture.png)
+![Alt text](./images/architecture.png)
 # 2\. System Requirements & Hardware Specifications
 
 ## 2.1 Hardware Requirements
+**A. Development & Training Environment**
+
+These specifications are for developers and researchers who need to train or fine-tune the models from scratch.
 
 | Component | Minimum Specification | Recommended Production |
 | :---- | :---- | :---- |
@@ -49,13 +52,28 @@ The system solves two primary challenges in clinical document processing:
 | **Disk Storage** | 50 GB NVMe SSD | 100 GB NVMe SSD |
 | **Operating System** | Ubuntu 20.04 LTS / Windows 11 | Ubuntu 22.04 LTS / WSL2 on Windows 11 |
 
+**B. End-User Requirements (For Using the Application)**
+
+These are the minimum requirements for users who want to access the deployed web application. No special hardware is needed!
+
+| Component | Minimum Specification | Recommended |
+| :---- | :---- | :---- |
+| **Device** | Desktop, Laptop, Tablet, or Smartphone | Modern device from last 5 years |
+| **Operating System** | Windows, macOS, Linux, iOS, Android | Any OS with modern browser |
+| **Browser** | Chrome 90+, Firefox 88+, Safari 14+, Edge 90+ | Latest version of any modern browser |
+| **Internet Connection** | Broadband (5+ Mbps) | Broadband (10+ Mbps) |
+| **RAM** | 4 GB | 8+ GB |
+| **Storage** | 100 MB free space | 500 MB free space |
+| **Screen Resolution** | 1024*768 | 1920*1080 or higher |
+
+
 ## 2.2 Software & Framework Requirements
 
 | Software | Version | Specific Utility |
 | :---- | :---- | :---- |
 | **Python** | 3.10+ | Core Runtime Engine |
-| **CUDA** | 11.8 or 12.1 | GPU Kernel Execution |
-| **PyTorch** | 2.2.0+cu121 | Deep Learning Tensor Engine |
+| **CUDA** | 11.8+ | GPU Kernel Execution |
+| **PyTorch** | 2.2+ | Deep Learning Tensor Engine |
 | **Transformers** | 4.38.0+ | HuggingFace Tokenizers & Pipelines |
 | **PEFT** | 0.8.2+ | Parameter-Efficient Fine-Tuning (QLoRA) |
 | **bitsandbytes** | 0.42.0+ | 4-bit Quantization (NF4) |
