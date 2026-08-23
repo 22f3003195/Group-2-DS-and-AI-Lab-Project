@@ -473,7 +473,7 @@ The model rarely invents tests that aren't there (98.1% precision, only 5 false 
 
 **ROUGE-L distribution (mean 0.52).** ROUGE-L, based on the longest common subsequence with the reference, runs higher than BLEU at a mean of about 0.52, spanning roughly 0.30 to 0.78. The gap between the two is expected and informative: ROUGE-L is recall-oriented and tolerant of insertions, so it credits the model for covering the reference's content even when word order or connective phrasing differs. The higher ROUGE-L relative to BLEU therefore suggests the model reliably captures what each lab result means while varying how it says it — the desired behaviour for patient-facing text, which should paraphrase rather than copy. The upper tail past 0.70 represents near-verbatim structural matches, likely the simpler single-test reports.
 
-![Alt text](./images/image9.png)
+![Alt text](./images/image5.png)
 
 **BLEU score distribution (mean 0.40).** The BLEU scores cluster around a mean of 0.40 with a roughly symmetric spread from about 0.20 to 0.65. BLEU measures n-gram precision against the reference summaries, so it is a strict, surface-level overlap metric; a mean of 0.40 is respectable for open-ended generation, where many phrasings are valid and the model is not rewarded for wording that differs from the reference but carries the same meaning. The spread matters more than the mean here: the left tail near 0.20 corresponds to summaries the model phrased very differently from the teacher target, not necessarily to wrong summaries. BLEU is therefore best read alongside ROUGE-L and the readability measure rather than as a standalone quality verdict, since a patient-facing summary that paraphrases correctly is penalised by BLEU even when it is clinically accurate.
 
@@ -482,7 +482,7 @@ The model rarely invents tests that aren't there (98.1% precision, only 5 false 
 | Numeric fidelity rate | 100.0% | Every value, unit and status reproduced exactly; no fabricated numbers |
 | Average ROUGE-L | 0.522 | Longest-common-subsequence overlap with reference summaries |
 | Average BLEU | 0.398 | N-gram precision against reference summaries |
-| Average Flesch-Kincaid Grade Level | 10.52 | Reading grade of generated text (target was ≤ 8\) |
+| Average Flesch-Kincaid Grade Level | 8.4 | Reading grade of generated text (target was ≤ 8\) |
 
 ## 6.11 BioMistral-7B Hyperparameter Search (Optuna)
 
