@@ -113,7 +113,7 @@ This document provides a transparent and comprehensive account of each team memb
 | **Ritwik Trivedi** | LLM Fine-Tuning, Evaluation, Experimentation, Documentation | | 35+ |
 | **Rajat Srivastava** | OCR, Complete Pipeline Integration, Deployment, Overall PPT | Milestone 5 (Team Leadership) | 35+ |
 | **Samta Ranka** | Preprocessing, Extraction Model Fine-tuning, OCR, Overall PPT, UI Development,Deployment | Milestone 4 & 6 (Team Leadership) | 40+ |
-| **Shivendra Patel** | Preprocessing, Extraction Model Fine-tuning, OCR, Overall Documentation | Milestone 1,2 & 3 (Team Leadership) | 40+ |
+| **Shivendra Patel** | Preprocessing, Extraction Model Fine-tuning, OCR, Overall Documentation (Report + PPT) | Milestone 1,2 & 3 (Team Leadership) | 40+ |
 
 
 ---
