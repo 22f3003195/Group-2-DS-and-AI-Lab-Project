@@ -425,7 +425,6 @@ Screenshots score highest on detection and value accuracy — they're born-digit
 
 Each report's "Main\_Errors" note was scanned for category-indicative language (missed/false test names, unit mentions, value mentions, reference-range/status mentions, and OCR/merge/rotation/noise mentions) and tallied. Shares below are of total error mentions, not of report count.
 
-![Alt text](./images/Screenshot%202026-08-14%20143652.png)
 
 # 
 
