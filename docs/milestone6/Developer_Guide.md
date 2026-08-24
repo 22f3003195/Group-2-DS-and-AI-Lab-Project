@@ -100,10 +100,12 @@ source venv/bin/activate
 Create **requirements.txt** :
 
 ```
+# Core ML & Deep Learning
 torch>=2.2.0
 torchvision>=0.17.0
 torchaudio>=2.2.0
 
+# Hugging Face Ecosystem
 transformers>=4.38.0
 datasets>=2.16.0
 accelerate>=0.27.0
@@ -111,20 +113,40 @@ peft>=0.8.2
 bitsandbytes>=0.42.0
 trl>=0.7.10
 evaluate>=0.4.1
+huggingface_hub>=0.20.0
+
+# NLP & ML
 seqeval>=1.2.2
+scikit-learn>=1.4.0
+scipy>=1.12.0
+textstat>=0.7.3
+
+# OCR & Image Processing
 paddlepaddle-gpu>=2.6.0
 paddleocr>=2.7.0.3
 opencv-python-headless>=4.8.1.78
 pdf2image>=1.16.3
 Pillow>=10.2.0
+pytesseract>=0.3.10
+
+# Data Processing
 pandas>=2.2.0
 numpy>=1.26.3
-scikit-learn>=1.4.0
-scipy>=1.12.0
+
+# Fuzzy Matching
 rapidfuzz>=3.6.1
-textstat>=0.7.3
+
+# API & Web Framework
+fastapi>=0.109.0
+uvicorn>=0.27.0
+python-multipart>=0.0.6
+pydantic>=2.5.0
+gradio>=4.0.0
+
+# Utilities
 requests>=2.31.0
 tqdm>=4.66.1
+python-dotenv>=1.0.0
 ```
 
 Install via pip:
@@ -147,31 +169,133 @@ python scripts/download_models.py \
 
 # 4\. Project Structure
 
-milestone5/
-
-│  
-├── pipeline/                         \# Core pipeline modules  
-│   ├── ocr-milestone-5.ipynb                        \# PaddleOCR \+ Inference  
-│  
-├── models/                           \# Model weights (downloaded)  
-│   ├── clinicalbert\_ber\_2/       \# Fine-tuned ClinicalBERT  
-│   └── biomistral\_qlora/             \# QLoRA adapter weights  
-│  
-├── training/                         \# Training scripts  
-│   ├── training-final-milestone5.ipynb                 \# ClinicalBERT training  
-│   └── LLM\_Fine\_Tuning\_and\_Evaluation.ipynb                  \# BioMistral training  
-│  
-├── data/                             \# Dataset files  
-│   ├── train\_reports.csv  
-│   ├── val\_reports.csv  
-│   ├── test\_reports.csv  
-│   ├── kept\_lab\_labels.txt           \# 643 MIMIC labels  
-│   └── all\_lab\_labels.txt            \# All lab labels  
-│  
-├── requirements.txt                  \# Python dependencies  
-├── README.md                         \# Project overview  
-└── .env.example                      \# Environment variables
-
+intelligent-medical-report-system/
+│
+├── backend/                          # Backend API Server (Python/FastAPI)
+│   ├── app/
+│   │   ├── __pycache__/              # Python bytecode cache
+│   │   ├── app/                      # API route handlers
+│   │   │   ├── test_api.py        # Report analysis endpoint
+│   │   │   ├── test_pipeline.py           # Interactive chat endpoint
+│   │   ├── core/                     # Core business logic
+│   │   │   ├── pipeline/             # Pipeline modules (imported)
+│   │   │   │   ├── ocr.py            # PaddleOCR extraction
+│   │   │   │   ├── llm.py            # LLM 
+│   │   │   │   ├── ner.py            # ClinicalBERT NER
+│   │   │   │   └── processor.py      # Entity grouping & flagging
+│   │   │   ├── config.py             # Configuration loader
+│   │   ├── __init__.py
+│   │   └── main.py                   # FastAPI entry point
+│   ├── tests/                        # Backend tests
+│   │   ├── test_api.py               # API endpoint tests
+│   │   └── test_pipeline.py          # Pipeline unit tests
+│   ├── proxy/                        # Proxy configuration
+│   │   └── app.py                    # Proxy server setup
+│   ├── .env                          # Environment variables
+│   ├── requirements.txt              # Python dependencies
+│   └── packages.txt                  # System packages
+│
+├── frontend/                         # Frontend React Application
+│   ├── public/                       # Static assets
+│   │   ├── favicon.svg               # Browser tab icon
+│   │   └── icons.svg                 # SVG icon sprite
+│   ├── src/                          # Source code
+│   │   ├── assets/                   # Images, fonts, etc.
+│   │   ├── components/               # Reusable UI components
+│   │   │   ├── chat/                 # Chat interface components
+│   │   │   │   ├── ChatWidget.tsx
+│   │   │   ├── dashboard/            # Scorecard components
+│   │   │   │   ├── Dashboard.tsx
+│   │   │   │   ├── LabResultCard.tsx
+│   │   │   │   └── LabResultTable.tsx
+│   │   │   │   └── RangeIndicator.tsx.tsx
+│   │   │   ├── homepage/             # Landing page
+│   │   │   │   ├── ErrorCard.tsx
+│   │   │   │   ├── FilePreviewCard.tsx
+│   │   │   │   └── UploadDropzone.tsx
+│   │   │   │   └── ProcessingPanel.tsx
+│   │   │   └── shared/               # Shared components
+│   │   │       ├── Button.tsx
+│   │   │       ├── Card.tsx
+│   │   │       └── Modal.tsx
+│   │   ├── services/                 # API service layer
+│   │   │   ├── api.ts                # API client
+│   │   ├── tests/                    # Frontend tests
+│   │   │   ├── chat.test.tsx
+│   │   │   ├── components.test.tsx
+│   │   │   ├── dashboard.test.tsx
+│   │   │   └── homepage.test.tsx
+│   │   ├── App.css                   # Global styles
+│   │   ├── App.tsx                   # Root component
+│   │   ├── index.css                 # CSS reset & base
+│   │   └── main.tsx                  # Entry point
+│   ├── .env                          # Frontend env variables
+│   ├── .gitignore
+│   ├── .oxlintrc.json                # Linter configuration
+│   ├── index.html                    # HTML template
+│   ├── package-lock.json             # Locked dependencies
+│   ├── package.json                  # npm dependencies
+│   ├── tsconfig.app.json             # TypeScript app config
+│   ├── tsconfig.json                 # TypeScript base config
+│   ├── tsconfig.node.json            # TypeScript node config
+│   ├── vite.config.ts                # Vite build configuration
+│   └── vitest.config.ts              # Vitest test configuration
+│
+├── pipeline/                         # Core pipeline modules (shared)
+│   ├── ocr-milestone-5.ipynb         # PaddleOCR + Inference notebook
+│   ├── rotation_correction.py        # Edge-based rotation detection
+│   ├── value_filter.py               # Value-line filtering
+│   ├── lexicon_corrector.py          # MIMIC lexicon correction
+│   ├── ner.py                        # ClinicalBERT NER
+│   └── processor.py                  # Entity grouping & flagging
+│
+├── models/                           # Model weights (downloaded)
+│   ├── clinicalbert_ner_2/           # Fine-tuned ClinicalBERT (2nd version)
+│   │   ├── config.json               # Model configuration
+│   │   ├── pytorch_model.bin         # Model weights (~440MB)
+│   │   ├── tokenizer.json            # Tokenizer configuration
+│   │   └── vocab.txt                 # Vocabulary file
+│   └── biomistral_qlora/             # QLoRA adapter weights
+│       ├── adapter_config.json       # PEFT configuration
+│       ├── adapter_model.bin         # Adapter weights (~85MB)
+│       └── tokenizer.json            # Tokenizer configuration
+│
+├── data/                             # Dataset files
+│   ├── train_reports.csv             # Training dataset
+│   ├── val_reports.csv               # Validation dataset
+│   ├── test_reports.csv              # Test dataset
+│   ├── kept_lab_labels.txt           # 643 filtered MIMIC labels
+│   └── all_lab_labels.txt            # All 1,198 lab labels
+│
+├── training/                         # Training scripts (Jupyter notebooks)
+│   ├── training-final-milestone5.ipynb     # ClinicalBERT fine-tuning
+│   └── LLM_Fine_Tuning_and_Evaluation.ipynb # BioMistral QLoRA training
+│
+├── notebooks/                        # Development notebooks
+│   ├── integrated_pipeline.ipynb     # End-to-end pipeline testing
+│   └── ocr-milestone-5.ipynb         # OCR experimentation
+│
+├── deployment/                       # Deployment configurations
+│   ├── Dockerfile                    # Docker build file
+│   ├── docker-compose.yml            # Multi-container setup
+│   ├── nginx.conf                    # Nginx configuration
+│   └── supervisord.conf              # Process management
+│
+├── scripts/                          # Utility scripts
+│   ├── download_models.py            # Download model weights
+│   ├── generate_reports.py           # Generate synthetic reports
+│   └── annotate_data.py              # Data annotation script
+│
+├── tests/                            # End-to-end tests
+│   ├── test_full_pipeline.py         # Complete pipeline test
+│   └── test_ui.py                    # UI integration tests
+│
+├── app.py                            # Legacy/standalone app entry
+├── requirements.txt                  # Root Python dependencies
+├── README.md                         # Project overview
+├── .env.example                      # Environment variable template
+├── .gitignore                        # Git ignore file
+└── LICENSE                           # License file
 # 5\. Configuration
 
 ## 5.1 Environment Configuration (.env.example)
@@ -466,19 +590,7 @@ Unit tests live under tests/. Because each stage has a small, typed contract, th
 
 # **13\.  Deployment**
 
-The system is packaged as a Streamlit app and shipped via Docker. Model weights are mounted (not baked into the image) so PHI-adjacent artifacts stay on the host.
-
-## **13.1  Docker**
-
-| BASH \# Build docker build \-t medical-report-analysis .   \# Run (GPU) — mount local weights and expose Streamlit docker run \--gpus all \-p 8501:8501 \\     \-v $(pwd)/models:/app/models \\     \--env-file .env \\     medical-report-analysis   \# Or with compose docker-compose up \--build |
-| :---- |
-
-## **13.2  Launching the App Directly**
-
-| BASH streamlit run app/s\_app.py |
-| :---- |
-
-**Privacy posture.** All models run locally; no request leaves the machine at inference time. For production, terminate TLS in front of Streamlit, keep APP\_SECRET\_KEY out of source control, and mount weights read-only.
+The system is deployed as a React + TypeScript + Vite frontend with a FastAPI backend, containerized via Docker. Model weights are mounted (not baked into the image) to keep PHI-adjacent artifacts secure on the host.
 
 # **14\.  Troubleshooting**
 
