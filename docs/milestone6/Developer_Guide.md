@@ -4,7 +4,7 @@
 
  
 
-Milestone \- 6 Report: Deployment & Documentation
+Milestone \- 6 Report: Developers Guide
 
  
 ![Alt text](./images/image2.gif)
@@ -168,7 +168,7 @@ python scripts/download_models.py \
 ```
 
 # 4\. Project Structure
-
+```
 intelligent-medical-report-system/
 │
 ├── backend/                          # Backend API Server (Python/FastAPI)
@@ -296,6 +296,8 @@ intelligent-medical-report-system/
 ├── .env.example                      # Environment variable template
 ├── .gitignore                        # Git ignore file
 └── LICENSE                           # License file
+```
+
 # 5\. Configuration
 
 ## 5.1 Environment Configuration (.env.example)
