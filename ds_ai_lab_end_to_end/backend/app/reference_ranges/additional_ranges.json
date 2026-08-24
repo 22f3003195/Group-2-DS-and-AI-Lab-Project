@@ -1,0 +1,186 @@
+{
+  "_readme": [
+    "Rows added to the vendor workbook, kept separate so the .xlsx stays",
+    "pristine and every addition is reviewable in a git diff.",
+    "",
+    "POLICY applied to every row:",
+    " 1. Values come from a named, publicly checkable source, recorded in Notes.",
+    " 2. Where reputable sources disagree, the BROADER range is used. A range",
+    "    that is too narrow reports healthy people as abnormal, which is the",
+    "    failure this module exists to prevent.",
+    " 3. Same four fields and same parsing rules as the workbook sheet, so",
+    "    sex-specific forms like '0-15 (M), 0-20 (F)' work unchanged.",
+    "",
+    "These remain BROAD PUBLISHED ADULT ranges, not lab-validated values."
+  ],
+  "rows": [
+    {
+      "Test Name": "RBC Count",
+      "Reference Range": "4.6–6.2 (M), 4.2–5.4 (F)",
+      "Units": "x10^6/µL",
+      "Notes": "Source: StatPearls, Normal and Abnormal CBC With Differential (NBK604207) broad adult range. Whole-blood red cell count. Was previously missing; the workbook's 'Red Blood Cells' row is urine microscopy (0-3/HPF), so a CBC red cell count had nothing correct to match against."
+    },
+    {
+      "Test Name": "Red Blood Cell Count",
+      "Reference Range": "4.6–6.2 (M), 4.2–5.4 (F)",
+      "Units": "x10^6/µL",
+      "Notes": "Source: StatPearls, Normal and Abnormal CBC With Differential (NBK604207) broad adult range. Whole-blood red cell count. Was previously missing; the workbook's 'Red Blood Cells' row is urine microscopy (0-3/HPF), so a CBC red cell count had nothing correct to match against."
+    },
+    {
+      "Test Name": "Total RBC Count",
+      "Reference Range": "4.6–6.2 (M), 4.2–5.4 (F)",
+      "Units": "x10^6/µL",
+      "Notes": "Source: StatPearls, Normal and Abnormal CBC With Differential (NBK604207) broad adult range. Whole-blood red cell count. Was previously missing; the workbook's 'Red Blood Cells' row is urine microscopy (0-3/HPF), so a CBC red cell count had nothing correct to match against."
+    },
+    {
+      "Test Name": "MCV",
+      "Reference Range": "80–100",
+      "Units": "fL",
+      "Notes": "Source: StatPearls, Normal and Abnormal CBC With Differential (NBK604207); Cleveland Clinic gives the same 80-100 fL. Was previously missing from table."
+    },
+    {
+      "Test Name": "Mean Corpuscular Volume",
+      "Reference Range": "80–100",
+      "Units": "fL",
+      "Notes": "Source: StatPearls, Normal and Abnormal CBC With Differential (NBK604207); Cleveland Clinic gives the same 80-100 fL. Was previously missing from table."
+    },
+    {
+      "Test Name": "MCH",
+      "Reference Range": "27–33",
+      "Units": "pg",
+      "Notes": "Source: StatPearls, Normal and Abnormal CBC With Differential (NBK604207) gives 27-32 and Mayo Clinic Labs 27-33; the broader range is used so a normal result is not flagged. Was previously missing from table."
+    },
+    {
+      "Test Name": "Mean Corpuscular Hemoglobin",
+      "Reference Range": "27–33",
+      "Units": "pg",
+      "Notes": "Source: StatPearls, Normal and Abnormal CBC With Differential (NBK604207) gives 27-32 and Mayo Clinic Labs 27-33; the broader range is used so a normal result is not flagged. Was previously missing from table."
+    },
+    {
+      "Test Name": "MCHC",
+      "Reference Range": "31–36",
+      "Units": "g/dL",
+      "Notes": "Source: Mayo Clinic Labs broad adult range. Was previously missing from table."
+    },
+    {
+      "Test Name": "Mean Corpuscular Hemoglobin Concentration",
+      "Reference Range": "31–36",
+      "Units": "g/dL",
+      "Notes": "Source: Mayo Clinic Labs broad adult range. Was previously missing from table."
+    },
+    {
+      "Test Name": "RDW",
+      "Reference Range": "11.5–15.0",
+      "Units": "%",
+      "Notes": "Source: StatPearls, Normal and Abnormal CBC With Differential (NBK604207). Varies between analysers. Was previously missing from table."
+    },
+    {
+      "Test Name": "Red Cell Distribution Width",
+      "Reference Range": "11.5–15.0",
+      "Units": "%",
+      "Notes": "Source: StatPearls, Normal and Abnormal CBC With Differential (NBK604207). Varies between analysers. Was previously missing from table."
+    },
+    {
+      "Test Name": "ESR",
+      "Reference Range": "0–15 (M), 0–20 (F)",
+      "Units": "mm/hr",
+      "Notes": "Source: StatPearls, Erythrocyte Sedimentation Rate (NBK557485), Westergren method, adults under 50. ESR rises with age (over 50: 20 mm/hr men, 30 mm/hr women), so a mildly raised value in an older adult may still be normal. Was previously missing from table."
+    },
+    {
+      "Test Name": "Erythrocyte Sedimentation Rate",
+      "Reference Range": "0–15 (M), 0–20 (F)",
+      "Units": "mm/hr",
+      "Notes": "Source: StatPearls, Erythrocyte Sedimentation Rate (NBK557485), Westergren method, adults under 50. ESR rises with age (over 50: 20 mm/hr men, 30 mm/hr women), so a mildly raised value in an older adult may still be normal. Was previously missing from table."
+    },
+    {
+      "Test Name": "BUN",
+      "Reference Range": "8–24 (M), 6–21 (F)",
+      "Units": "mg/dL",
+      "Notes": "Source: Cleveland Clinic, Blood Urea Nitrogen (BUN) Test adult range. Serum BUN. Was previously missing; the workbook held only body-fluid and urine urea nitrogen rows."
+    },
+    {
+      "Test Name": "Blood Urea Nitrogen",
+      "Reference Range": "8–24 (M), 6–21 (F)",
+      "Units": "mg/dL",
+      "Notes": "Source: Cleveland Clinic, Blood Urea Nitrogen (BUN) Test adult range. Serum BUN. Was previously missing; the workbook held only body-fluid and urine urea nitrogen rows."
+    },
+    {
+      "Test Name": "Urea",
+      "Reference Range": "13–43",
+      "Units": "mg/dL",
+      "Notes": "Source: derived from the Cleveland Clinic BUN range using urea = BUN x 2.14 (urea MW 60 / nitrogen MW 28). Labs outside the US usually report urea rather than BUN. Was previously missing from table."
+    },
+    {
+      "Test Name": "Urea, Serum",
+      "Reference Range": "13–43",
+      "Units": "mg/dL",
+      "Notes": "Source: derived from the Cleveland Clinic BUN range using urea = BUN x 2.14 (urea MW 60 / nitrogen MW 28). Labs outside the US usually report urea rather than BUN. Was previously missing from table."
+    },
+    {
+      "Test Name": "Blood Urea",
+      "Reference Range": "13–43",
+      "Units": "mg/dL",
+      "Notes": "Source: derived from the Cleveland Clinic BUN range using urea = BUN x 2.14 (urea MW 60 / nitrogen MW 28). Labs outside the US usually report urea rather than BUN. Was previously missing from table."
+    },
+    {
+      "Test Name": "eGFR",
+      "Reference Range": "≥60",
+      "Units": "mL/min/1.73m²",
+      "Notes": "Source: KDIGO CKD guideline, GFR categories G1-G2. Under 60 for three months or more defines CKD. 60-89 (G2) is only mildly reduced and is common with age, so the threshold here is 60 rather than 90. Was previously missing from table."
+    },
+    {
+      "Test Name": "Estimated GFR",
+      "Reference Range": "≥60",
+      "Units": "mL/min/1.73m²",
+      "Notes": "Source: KDIGO CKD guideline, GFR categories G1-G2. Under 60 for three months or more defines CKD. 60-89 (G2) is only mildly reduced and is common with age, so the threshold here is 60 rather than 90. Was previously missing from table."
+    },
+    {
+      "Test Name": "Estimated Glomerular Filtration Rate",
+      "Reference Range": "≥60",
+      "Units": "mL/min/1.73m²",
+      "Notes": "Source: KDIGO CKD guideline, GFR categories G1-G2. Under 60 for three months or more defines CKD. 60-89 (G2) is only mildly reduced and is common with age, so the threshold here is 60 rather than 90. Was previously missing from table."
+    },
+    {
+      "Test Name": "Prothrombin Time",
+      "Reference Range": "11–13.5",
+      "Units": "sec",
+      "Notes": "Source: matches the workbook's existing 'PT Mean' row. Strongly reagent- and analyser-dependent; prefer the reporting lab's own range. Was previously missing from table."
+    },
+    {
+      "Test Name": "APTT",
+      "Reference Range": "26–36",
+      "Units": "sec",
+      "Notes": "Source: common published adult range. Strongly reagent-dependent; prefer the reporting lab's own range. Was previously missing from table."
+    },
+    {
+      "Test Name": "Activated Partial Thromboplastin Time",
+      "Reference Range": "26–36",
+      "Units": "sec",
+      "Notes": "Source: common published adult range. Strongly reagent-dependent; prefer the reporting lab's own range. Was previously missing from table."
+    },
+    {
+      "Test Name": "TIBC",
+      "Reference Range": "250–450",
+      "Units": "µg/dL",
+      "Notes": "Source: Mayo Clinic Labs broad adult range. Total iron binding capacity. Was previously missing from table."
+    },
+    {
+      "Test Name": "Total Iron Binding Capacity",
+      "Reference Range": "250–450",
+      "Units": "µg/dL",
+      "Notes": "Source: Mayo Clinic Labs broad adult range. Total iron binding capacity. Was previously missing from table."
+    },
+    {
+      "Test Name": "A/G Ratio",
+      "Reference Range": "1.0–2.5",
+      "Units": "",
+      "Notes": "Source: common published adult range; a ratio, so it is unitless. Was previously missing from table."
+    },
+    {
+      "Test Name": "Albumin/Globulin Ratio",
+      "Reference Range": "1.0–2.5",
+      "Units": "",
+      "Notes": "Source: common published adult range; a ratio, so it is unitless. Was previously missing from table."
+    }
+  ]
+}

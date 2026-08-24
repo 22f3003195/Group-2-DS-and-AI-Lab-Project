@@ -1,0 +1,8 @@
+# Proxy Space (rajsri2609/medical-report-ai-proxy).
+# Holds HF_TOKEN as a Space secret and forwards to the private backend Space,
+# so the browser never sees a credential.
+#
+# Pinned for the same reason as the backend: an unpinned `gradio` now resolves
+# to 6.x, which changes component payload schemas.
+gradio>=5.0,<6.0
+gradio_client>=1.3,<2.0

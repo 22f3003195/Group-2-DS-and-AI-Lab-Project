@@ -1,0 +1,26 @@
+# CPU-only development. Install this instead of requirements.txt to run and
+# test the backend on a machine with no GPU:
+#
+#     pip install -r requirements-dev.txt
+#     export MEDREPORT_STUB_MODELS=1
+#     cd backend && python test_grounding.py
+#     python app.py          # both API endpoints, no models loaded
+#
+# Everything most likely to be wrong is exercised by this set: the reference
+# lookup, unit conversion, status arithmetic, the grounding block, the
+# readability loop, and every wire contract between the three Spaces. Only
+# model *quality* needs the full requirements.txt and a GPU.
+
+gradio>=5.0,<6.0
+gradio_client>=1.3,<2.0
+
+openpyxl>=3.1,<4.0
+rapidfuzz>=3.0,<4.0
+textstat>=0.7,<1.0
+
+numpy>=1.24,<2.0
+
+# Optional: only needed to run the OCR stage locally. Stub mode accepts a .txt
+# of report text instead, so these stay commented out by default.
+# opencv-python-headless>=4.9,<5.0
+# pdf2image>=1.17,<2.0

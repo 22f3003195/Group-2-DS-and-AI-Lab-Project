@@ -1,0 +1,20 @@
+# PyTorch (matches GPU/CPU requirement)
+torch
+
+# Transformers & PEFT
+transformers
+peft
+bitsandbytes
+accelerate
+datasets
+
+# OCR and Image Processing
+paddleocr
+paddlepaddle
+rapidfuzz
+pdf2image
+opencv-python
+numpy
+pandas
+pytesseract
+pillow

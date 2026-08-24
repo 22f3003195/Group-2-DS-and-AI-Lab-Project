@@ -1,0 +1,162 @@
+{
+ "WBC": {
+  "unit": "10^9/L",
+  "normal": [
+   4.0,
+   11.0
+  ],
+  "name": "WBC"
+ },
+ "WBC COUNT": {
+  "unit": "10^9/L",
+  "normal": [
+   4.0,
+   11.0
+  ],
+  "name": "WBC"
+ },
+ "HEMOGLOBIN": {
+  "unit": "g/dL",
+  "normal": [
+   13.0,
+   17.0
+  ],
+  "name": "Hemoglobin"
+ },
+ "HCT": {
+  "unit": "%",
+  "normal": [
+   40.0,
+   50.0
+  ],
+  "name": "Hematocrit"
+ },
+ "PLATELETS": {
+  "unit": "10^9/L",
+  "normal": [
+   150.0,
+   450.0
+  ],
+  "name": "Platelets"
+ },
+ "PLATELET COUNT": {
+  "unit": "10^9/L",
+  "normal": [
+   150.0,
+   450.0
+  ],
+  "name": "Platelets"
+ },
+ "MCV": {
+  "unit": "fL",
+  "normal": [
+   83.0,
+   101.0
+  ],
+  "name": "MCV"
+ },
+ "MCH": {
+  "unit": "pg",
+  "normal": [
+   27.0,
+   32.0
+  ],
+  "name": "MCH"
+ },
+ "MCHC": {
+  "unit": "g/dL",
+  "normal": [
+   31.5,
+   34.5
+  ],
+  "name": "MCHC"
+ },
+ "RDW": {
+  "unit": "%",
+  "normal": [
+   11.5,
+   14.5
+  ],
+  "name": "RDW"
+ },
+ "NEUTROPHILS": {
+  "unit": "%",
+  "normal": [
+   40.0,
+   80.0
+  ],
+  "name": "Neutrophils"
+ },
+ "LYMPHOCYTES": {
+  "unit": "%",
+  "normal": [
+   20.0,
+   40.0
+  ],
+  "name": "Lymphocytes"
+ },
+ "EOSINOPHILS": {
+  "unit": "%",
+  "normal": [
+   1.0,
+   6.0
+  ],
+  "name": "Eosinophils"
+ },
+ "BASOPHILS": {
+  "unit": "%",
+  "normal": [
+   0.0,
+   2.0
+  ],
+  "name": "Basophils"
+ },
+ "MONOCYTES": {
+  "unit": "%",
+  "normal": [
+   2.0,
+   10.0
+  ],
+  "name": "Monocytes"
+ },
+ "ABSOLUTE NEUTROPHILS": {
+  "unit": "cells/mcL",
+  "normal": [
+   1500.0,
+   7500.0
+  ],
+  "name": "Absolute Neutrophils"
+ },
+ "ABSOLUTE LYMPHOCYTES": {
+  "unit": "cells/mcL",
+  "normal": [
+   1300.0,
+   3500.0
+  ],
+  "name": "Absolute Lymphocytes"
+ },
+ "ABSOLUTE EOSINOPHILS": {
+  "unit": "cells/mcL",
+  "normal": [
+   0.0,
+   500.0
+  ],
+  "name": "Absolute Eosinophils"
+ },
+ "ABSOLUTE MONOCYTES": {
+  "unit": "cells/mcL",
+  "normal": [
+   200.0,
+   950.0
+  ],
+  "name": "Absolute Monocytes"
+ },
+ "ABSOLUTE BASOPHILS": {
+  "unit": "cells/mcL",
+  "normal": [
+   0.0,
+   300.0
+  ],
+  "name": "Absolute Basophils"
+ }
+}
